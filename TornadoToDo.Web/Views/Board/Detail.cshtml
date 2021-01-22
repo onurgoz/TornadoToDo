@@ -1,0 +1,120 @@
+@model BoardView
+
+@{
+    ViewData["Title"] = "Index";
+}
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
+
+@functions {
+    public string GetAntiXsrfRequestToken()
+    {
+        return Xsrf.GetAndStoreTokens(Context).RequestToken;
+    }
+}
+
+@section Styles{
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #8C5245;
+        }
+    </style>
+    <!-- Compiled and minified JavaScript -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="~/css/site.css" rel="stylesheet" />-->
+}
+
+<input type="hidden" id="RequestVerificationToken" name="RequestVerificationToken" value="@GetAntiXsrfRequestToken()">
+
+
+
+
+
+<div class="container">
+
+    <h4 style="text-align:center;margin:50px 0px 10px 0px">@Model.Title</h4>
+
+    <div class="row">
+        <div class="col s10">
+            <a asp-controller="Board" asp-action="AddCard" asp-route-id="@Model.Id" class="btn btn-success" style=" border:solid 1px; margin: 0px 0px 25px 0px">
+                Task Ekle
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        @foreach (var column in Model.Columns)
+        {
+            <div class="col m4" style="background-color:#323875;border: solid 1px;border-radius:25px; margin:6px 6px 6px 6px;">
+
+                <h3 style="color:#020F59; text-align:center ">@column.Title</h3>
+
+                <div class="column" style="min-height: 600px" id="@column.Id">
+
+                    @foreach (var card in column.Cards)
+                    {
+                        <div class="card border-dark mb-3 draggable" style="border:solid 1px" id="@card.Id">
+                            <div class="card-body" style="        background-color:#FFD8AA">
+                                <p>
+                                    <a asp-controller="Card" asp-action="Details" asp-route-id="@card.Id" style="text-decoration:none;color:#023373">
+
+                                        @{
+                                            if (card.Title.Length > 25)
+                                            {
+                                                @card.Title.Substring(0, 25)
+
+                                            }
+                                            else
+                                            {
+                                                @card.Title
+                                            }
+                                        }
+                                    </a>
+                                </p>
+                                <a asp-action="Edit" asp-controller="Card" asp-route-id="@card.Id">Guncelle</a>
+                                <a asp-action="Delete" asp-controller="Card" asp-route-id="@card.Id">Sil</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section JavaScript{
+    <script>
+        $(function () {
+            $(".draggable").draggable({
+                revert: "invalid"
+            });
+
+            $('.column').droppable({
+                accept: '.draggable',
+                drop: function (event, ui) {
+                    var dropped = ui.draggable;
+                    var droppedOn = $(this);
+                    $(dropped).detach().css({ top: 0, left: 0 }).appendTo(droppedOn);
+
+                    $.ajax({
+                        type: "POST",
+                        dataType: "json",
+                        contentType: "application/json",
+                        url: "/api/Board/movecard",
+                        beforeSend: function (request) {
+                            request.setRequestHeader("RequestVerificationToken", $('#RequestVerificationToken').val());
+                        },
+                        data: JSON.stringify({ cardId: dropped[0].id, columnId: droppedOn[0].id }),
+                    });
+                }
+            });
+        });
+    </script>
+
+}

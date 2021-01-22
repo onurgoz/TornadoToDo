@@ -1,0 +1,9 @@
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Entities\bin\Debug\netcoreapp3.1\TornadoToDo.Entities.deps.json
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Entities\bin\Debug\netcoreapp3.1\TornadoToDo.Entities.dll
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Entities\bin\Debug\netcoreapp3.1\TornadoToDo.Entities.pdb
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Entities\obj\Debug\netcoreapp3.1\TornadoToDo.Entities.csprojAssemblyReference.cache
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Entities\obj\Debug\netcoreapp3.1\TornadoToDo.Entities.AssemblyInfoInputs.cache
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Entities\obj\Debug\netcoreapp3.1\TornadoToDo.Entities.AssemblyInfo.cs
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Entities\obj\Debug\netcoreapp3.1\TornadoToDo.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Entities\obj\Debug\netcoreapp3.1\TornadoToDo.Entities.dll
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Entities\obj\Debug\netcoreapp3.1\TornadoToDo.Entities.pdb

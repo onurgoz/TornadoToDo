@@ -1,0 +1,21 @@
+﻿@model AddBoardModel
+@{ ViewData["Title"] = "Create"; }
+@section Styles{
+    <style>
+        body {
+            background-color: #8C5245;
+        }
+    </style>
+}
+<div class="container">
+    <h2>Yeni Bir Panel Ekle</h2>
+    <form method="post" asp-action="AddBoard" asp-controller="Board">
+        <div class="form-group">
+            <span class="alert-danger" asp-validation-for="@Model.Title"></span>
+            <br />
+            <input type="text" asp-for="Title" placeholder="Panel Adı" />
+        </div>
+        <button name="PanelKaydet" type="submit" class="btn btn-secondary">Kaydet</button>
+    </form>
+</div>
+

@@ -1,0 +1,14 @@
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\bin\Debug\netcoreapp3.1\TornadoToDo.Business.deps.json
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\bin\Debug\netcoreapp3.1\TornadoToDo.Business.dll
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\bin\Debug\netcoreapp3.1\TornadoToDo.Business.pdb
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\bin\Debug\netcoreapp3.1\TornadoToDo.DataAccess.dll
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\bin\Debug\netcoreapp3.1\TornadoToDo.Entities.dll
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\bin\Debug\netcoreapp3.1\TornadoToDo.DataAccess.pdb
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\bin\Debug\netcoreapp3.1\TornadoToDo.Entities.pdb
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\obj\Debug\netcoreapp3.1\TornadoToDo.Business.csprojAssemblyReference.cache
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\obj\Debug\netcoreapp3.1\TornadoToDo.Business.AssemblyInfoInputs.cache
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\obj\Debug\netcoreapp3.1\TornadoToDo.Business.AssemblyInfo.cs
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\obj\Debug\netcoreapp3.1\TornadoToDo.Business.csproj.CoreCompileInputs.cache
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\obj\Debug\netcoreapp3.1\TornadoToDo.Business.csproj.CopyComplete
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\obj\Debug\netcoreapp3.1\TornadoToDo.Business.dll
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.Business\obj\Debug\netcoreapp3.1\TornadoToDo.Business.pdb

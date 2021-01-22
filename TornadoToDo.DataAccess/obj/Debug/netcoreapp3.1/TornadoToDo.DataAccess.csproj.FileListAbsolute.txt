@@ -1,0 +1,15 @@
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\bin\Debug\netcoreapp3.1\TornadoToDo.DataAccess.deps.json
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\bin\Debug\netcoreapp3.1\TornadoToDo.DataAccess.runtimeconfig.json
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\bin\Debug\netcoreapp3.1\TornadoToDo.DataAccess.runtimeconfig.dev.json
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\bin\Debug\netcoreapp3.1\TornadoToDo.DataAccess.dll
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\bin\Debug\netcoreapp3.1\TornadoToDo.DataAccess.pdb
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\bin\Debug\netcoreapp3.1\TornadoToDo.Entities.dll
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\bin\Debug\netcoreapp3.1\TornadoToDo.Entities.pdb
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\obj\Debug\netcoreapp3.1\TornadoToDo.DataAccess.csprojAssemblyReference.cache
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\obj\Debug\netcoreapp3.1\TornadoToDo.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\obj\Debug\netcoreapp3.1\TornadoToDo.DataAccess.AssemblyInfo.cs
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\obj\Debug\netcoreapp3.1\TornadoToDo.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\obj\Debug\netcoreapp3.1\TornadoToDo.DataAccess.csproj.CopyComplete
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\obj\Debug\netcoreapp3.1\TornadoToDo.DataAccess.dll
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\obj\Debug\netcoreapp3.1\TornadoToDo.DataAccess.pdb
+C:\Users\Kinqw\Documents\GitHub\TornadoToDo\TornadoToDo.DataAccess\obj\Debug\netcoreapp3.1\TornadoToDo.DataAccess.genruntimeconfig.cache

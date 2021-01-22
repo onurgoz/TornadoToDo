@@ -1,0 +1,91 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    string active = string.Empty;
+    if (TempData["Active"] != null)
+    {
+        active = TempData["Active"]?.ToString();
+    }
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tornado</title>
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+
+
+    @RenderSection("Styles", false)
+
+</head>
+
+<body>
+    @{
+        if (HttpContextAccessor.HttpContext.Session.GetString("username") != null)
+        {
+            <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#3F4859">
+                <a class="navbar-brand" asp-action="Index" asp-controller="Board">TornadoToDo</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">@HttpContextAccessor.HttpContext.Session.GetString("username")</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-action="LogOut" asp-controller="Home" class="nav-link">Çıkış Yap</a>
+                            </li>
+                        </ul>
+                </div>
+            </nav>
+        }
+        else
+        {
+            <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#3F4859">
+                <a class="navbar-brand" asp-action="SignIn" asp-controller="Home" asp-area="Member">TornadoToDo</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="SignIn" asp-controller="Home">Giriş Yap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="SignUp" asp-controller="Home">Üye Ol</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        }
+    }
+    <div class="container pt-3">
+        @RenderBody()
+    </div>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    @RenderSection("Javascript", false)
+</body>
+
+</html>

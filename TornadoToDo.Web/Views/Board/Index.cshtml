@@ -1,0 +1,43 @@
+﻿@model List<BoardList>
+@{
+    ViewData["Title"] = "Index";
+}
+@section Styles{
+    <style>
+        body {
+            background-color: #8C5245;
+        }
+    </style>
+}
+<div class="container">
+    <div class="row text-center">
+        <h2 class="px-2 py-2 mx-2">Panolar</h2>
+        <a asp-action="AddBoard" asp-controller="Board" class="btn btn-success" style=" border:solid 1px; margin: 10px 10px 10px 10px">Yeni Bir Pano Ekle</a>
+    </div>
+
+    <div class="row">
+        @foreach (var board in Model)
+        {
+            
+                <div class="px-2 py-2 mx-2 my-2" style="float: left; margin-right: 2em; width: 22em;background-color:#FFD8AA">
+                    
+                        <div class="card-content white-text ">
+                            <span class="card-title">
+                                @board.Title
+                            </span>
+                        </div>
+                        <div class="card-action">
+                            <a  asp-action="Detail" asp-controller="Board"
+                               asp-route-id="@board.Id"
+                               class="collection-item px-2 py-2 mx-2 my-2">Görüntüle</a>
+                            <a  asp-action="Delete" asp-controller="Board"
+                               asp-route-id="@board.Id"
+                               class="collection-item px-2 py-2 mx-2 my-2">Sil</a>
+                            
+                        </div>
+                </div>
+        }
+    </div>
+</div>
+
+
